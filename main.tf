@@ -22,7 +22,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "instance_terraform_bruneau" {
   count         = var.create_instance ? var.instance_number : 0
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
