@@ -19,8 +19,8 @@ variable "path" {
 variable "instance_name" {
   type = string
   description = "Instance name"
+  default = "instance_terraform_bruneau"
 }
-
 
 variable "instance_t" {
   type = string
