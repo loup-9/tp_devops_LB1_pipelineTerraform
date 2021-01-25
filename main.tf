@@ -23,9 +23,9 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "instance_terraform_bruneau" {
-  count         = var.create_instance ? var.instance_number : 0
+  count         = var.create_instance ? var.instance_nbr : 0
   ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type
+  instance_type = var.instance_t
   key_name = "tp_dev_ynov"
 
   tags = {
